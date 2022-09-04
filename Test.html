@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link href="bootstrap-5.0.2-dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    </head>
+    <body>
+        <div class="container-fluid bg-primary text-white">
+            <div class="row py-3 text-center">
+                <h1 class="text-center">
+                    برنامج التواصل بين الصيدلية والصم
+                </h1>
+                <a href="index.html" class="btn btn-sm btn-light w-25 text-center mx-auto my-3">home</a>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row"><h1>الجرعات</h1></div>
+            <div class="row mt-3">
+                <div class="col-3 form-group">
+                    <label class="pb-1">نوع الدواء</label>
+                    <select class="form-select" id="te">
+                        <option value="0" disabled selected>اختر النوع</option>
+                        <option>حبوب</option>
+                        <option>تحاميل</option>
+                        <option>كريمات</option>
+                        <option>شراب</option>
+                        <option>بخاخ</option>
+                        <option>قطرات</option>
+                    </select>
+                </div>
+                <div class="col-3 form-group">
+                    <label class="pb-1">العدد</label>
+                    <select class="form-select">
+                        <option value="0" disabled selected>اختر العدد</option>
+                        <option value="34">1</option>
+                        <option value="35">3</option>
+                        <option value="36">4</option>
+                        <option value="37">5</option>
+                        <option value="38">6</option>
+                        <option value="39">7</option>
+                        <option value="40">8</option>
+                        <option value="41">9</option>
+                        <option value="42">10</option>
+                        <option value="43">15</option>
+                        <option value="44">20</option>
+                        <option value="45">25</option>
+                        <option value="46">50</option>
+                        <option value="47">75</option>
+                        <option value="48">100</option>
+                    </select>
+                </div>
+                <div class="col-3 form-group">
+                    <label class="pb-1">المقدار</label>
+                    <select class="form-select">
+                        <option value="0" disabled selected>اختر المقدار</option>
+                        <option value="20">مل</option>
+                        <option value="21">بخة</option>
+                        <option value="22">بختين</option>
+                        <option value="23">بخات</option>
+                        <option value="24">قطرة</option>
+                        <option value="25">قطرتين</option>
+                        <option value="26">قطرات</option>
+                        <option value="27">مرة</option>
+                        <option value="28">مرتين</option>
+                        <option value="29">مرات</option>
+                        <option value="30">حبة</option>
+                        <option value="31">حبتين</option>
+                        <option value="32">حبات</option>
+                        <option value="33">تحميلة</option>
+                    </select>
+                </div>
+                <div class="col-3 form-group">
+                    <label class="pb-1">التكرار</label>
+                    <select class="form-select">
+                        <option value="0" disabled selected>اختر التكرار</option>
+                        <option value="1">٤ ساعات</option>
+                        <option value="2">٦ ساعات</option>
+                        <option value="3">٨ ساعات</option>
+                        <option value="4">١٢ ساعات</option>
+                        <option value="5">عند اللزوم</option>
+                        <option value="6">يومي</option>
+                    </select>
+                </div>
+            </div>
+            <div class="row mt-3">
+                <div class="col-4 form-group">
+                    <label class="pb-1">المدة</label>
+                    <select class="form-select">
+                        <option value="0" disabled selected>اختر المدة</option>
+                        <option value="7">يوم</option>
+                        <option value="8">يومين</option>
+                        <option value="9">ايام</option>
+                        <option value="10">اسبوع</option>
+                        <option value="11">اسبوعين</option>
+                        <option value="12">شهر</option>
+                        <option value="13">شهرين</option>
+                    </select>
+                </div>
+                <div class="col-4 form-group">
+                    <label class="pb-1">الوقت</label>
+                    <select class="form-select">
+                        <option value="0" disabled selected>اختر الوقت</option>
+                        <option value="14">قبل الاكل</option>
+                        <option value="15">بعد الاكل</option>
+                        <option value="16">اثناء الاكل</option>
+                        <option value="17">اثناء او بعد الاكل</option>
+                        <option value="18">على معدة فاضية</option>
+                        <option value="19">قبل النوم</option>
+                    </select>
+                </div>
+                <div class="col-4">
+                    <button class="btn btn-primary w-100 h-100" onclick="viewVideo()">عرض</button>
+                </div>
+            </div>
+            <hr>
+            <div class="row"><h1>طريقة الاستخدام</h1></div>
+            <div class="row">
+                <div class="col-8">
+                    <label class="pb-1">طريقة الاستخدام</label>
+                    <select class="form-select">
+                        <option value="0" disabled selected>اختر طريقة الاستخدام</option>
+                        <option value="72">تبخ منه على المنطقه ثم يترك حتى ينشف</option>
+                        <option value="73">يوضع داخل العين كمية صغيرة</option>
+                        <option value="74">يوضع على الجفن كمية صغيرة</option>
+                        <option value="75">ملعقة كبيرة على نصف كوب ماء</option>
+                        <option value="76">ملعقة صغيرة على نصف كوب ماء</option>
+                        <option value="77">يوضع يوم وترك</option>
+                        <option value="78">توضع طبقة خفيفة</option>
+                        <option value="79">توضع طبقة سميكة</option>
+                        <option value="80">تخلط الكريمات مع بعض</option>
+                        <option value="81">يوضع الفازلين حول الثالوث والقطرة عليه</option>
+                        <option value="82">يوضع المرهم الأسود أولا حتى تنشف الحبة ثم يوضع المضاد الحيوي</option>
+                        <option value="83">يوضع على الحبوب فقط</option>
+                        <option value="84">تدهن في اتجاه واحد او على شكل دائري</option>
+                        <option value="85">يوضع هذا الدواء لمدة 5 دقائق ثم يغسل</option>
+                        <option value="86">يوضع هذا الدواء لمدة 10 دقائق ثم يغسل</option>
+                        <option value="87">تغسل الشعر بالشامبو ويترك لمدة نصف ساعه ثم يشطف ويمشط الشعر في مشط خاص للجرب ويمكن شرائه من الصيدليات الخاصه</option>
+                        <option value="88">يأخذ على الريق, عدم أخذ أي أدوية اخرى معه, شرب كوب ماء مع الجلوس لمدة 30 دقيقة وبعد أكل وجبة يمكن النوم 30 دقيقة</option>
+                        <option value="89">يؤخذ قبل النوم مع عدم القيام المفاجئ</option>
+                        <option value="90">يوضع من هذا الغسول ملعقة كبيرة على لتر ماء ثم يشطف</option>
+                        <option value="91">استنشاقه مثل الوضوء أو باستخدام ابره صغيره داخل الأنف, والابر المخصصه متوفرة عند التمريض</option>
+                        <option value="92">تدليك مكان الألم</option>
+                        <option value="93">تدليك فروة الرأس</option>
+                        <option value="94">يبرد الظفر ويعقم قبل استخدام الدواء</option>
+                        <option value="95">بالإمكان أخذه بعد الغداء بساعتين وفالليل تأخذ الفيتامينات لتجنب التعارض بينهم</option>
+                    </select>
+                </div>
+                <div class="col-4">
+                    <button class="btn btn-primary w-100 h-100" onclick="viewVideo()">عرض</button>
+                </div>
+            </div>
+            <hr>
+            <div class="row"><h1>تعليمات خاصة</h1></div>
+            <div class="row">
+                <div class="col-4">
+                    <label class="pb-1">تعليمات خاصة</label>
+                    <select class="form-select">
+                        <option value="0" disabled selected>اختر التعليمات الخاصة</option>
+                        <option value="49">لا يخلط الكريم مع غيره</option>
+                        <option value="50">لا يخلط الكريم مع المرهم</option>
+                        <option value="51">لا يستخدم للوجه</option>
+                        <option value="52">يستخدم فالليل فقط</option>
+                        <option value="53">ممنوع وضع قطرة العين فوق العدسات</option>
+                        <option value="54">الإنتظار من 5 إلى 10 دقائق بين وضع القطرات</option>
+                        <option value="55">عدم القيام المفاجئ بعد الجرعة</option>
+                        <option value="56">يمكن كسرها لنصفين</option>
+                        <option value="57">لا يمكن كسرها لنصفين</option>
+                        <option value="58">رج الزجاجه جيدا قبل الإستخدام</option>
+                        <option value="59">الباندول لا يأخذ مع اي مسكنات أخرى في نفس الوقت ويجب أن يكون بينهم 4 إلى 6 ساعات</option>
+                        <option value="60">فروة الرأس يجب أن تكون جافة</option>
+                        <option value="61">فروة الرأس يجب أن تكون مبللة</option>
+                    </select>
+                </div>
+                <div class="col-4">
+                    <label class="pb-1">تعليمات خاصة مشتركة</label>
+                    <select class="form-select">
+                        <option value="0" disabled selected>اختر التعليمات المشتركة</option>
+                        <option value="62">هذا الدواء يسبب النعاس</option>
+                        <option value="63">لا يخلط</option>
+                        <option value="64">ممكن ان يخلط</option>
+                        <option value="65">يرجى التأكد من تاريخ الإنتهاء</option>
+                        <option value="66">يمكن كسرها لنصفين</option>
+                        <option value="67">لا يمكن كسرها لنصفين</option>
+                        <option value="68">رج الزجاجه جيدا قبل الإستخدام</option>
+                        <option value="69">الباندول لا يأخذ مع اي مسكنات أخرى في نفس الوقت ويجب أن يكون بينهم 4 إلى 6 ساعات</option>
+                        <option value="70">فروة الرأس يجب أن تكون جافة</option>
+                        <option value="71">فروة الرأس يجب أن تكون مبللة</option>
+                    </select>
+                </div>
+                <div class="col-4">
+                    <button class="btn btn-primary w-100 h-100" onclick="viewVideo()">عرض</button>
+                </div>
+            </div>
+            <hr>
+            <div class="row"><h1>تعليمات عامة</h1></div>
+            <div class="row">
+                <div class="col-8">
+                    <label class="pb-1">تعليمات عامة</label>
+                    <select class="form-select">
+                        <option value="0" disabled selected>اختر التعليمات العامة</option>
+                        <option value="96">هذا الكريم للجروح</option>
+                        <option value="97">هذا الكريم للحبوب</option>
+                        <option value="98">هذا الكريم للدوالي</option>
+                        <option value="99">هذا الدواء لألم المفاصل</option>
+                        <option value="100">هذا الدواء لألم العظام</option>
+                        <option value="101">هذا الدواء لقشرة الرأس</option>
+                        <option value="102">هذا الدواء للأكزيما</option>
+                        <option value="103">هذا الدواء للفروة الدهنية</option>
+                        <option value="104">هذا الدواء للبواسير</option>
+                        <option value="105">هذا الدواء لصدفية الرأس</option>
+                        <option value="106">هذا الدواء للضغط</option>
+                        <option value="107">هذا الدواء للسكري</option>
+                        <option value="108">هذا الدواء لتنميل أطراف الأصابع</option>
+                        <option value="109">هذا الدواء للأملاح</option>
+                        <option value="110">هذا الدواء لألم الأسنان</option>
+                        <option value="111">هذا مضاد حيوي</option>
+                        <option value="112">هذا الدواء للكلسترول</option>
+                        <option value="113">هذا الدواء للفطريات</option>
+                        <option value="114">هذا الدواء لتنظيم دقات القلب</option>
+                        <option value="115">هذا الدواء لألم البطن</option>
+                        <option value="116">هذا الدواء للمغص</option>
+                        <option value="117">هذا الدواء لإلتهاب الأسنان</option>
+                        <option value="118">هذا الدواء للدوخه</option>
+                        <option value="119">هذا الدواء مرخي للعضلات</option>
+                        <option value="120">هذا الدواء منظم للسكر</option>
+                        <option value="121">هذا الدواء للحساسية</option>
+                        <option value="122">هذا الدواء للثالوث</option>
+                        <option value="123">هذا الدواء للإلتهاب</option>
+                        <option value="124">هذا الدواء للحارج</option>
+                        <option value="125">هذا الدواء للغازات</option>
+                        <option value="126">هذا الدواء للصداع</option>
+                        <option value="127">هذا المرطب للجسم</option>
+                        <option value="128">هذه قطرة مرطبه للعين</option>
+                        <option value="129">هذا الدواء لديدان البطن</option>
+                        <option value="130">هذا المرطب للشفايف</option>
+                        <option value="131">هذا المرطب للوجه</option>
+                        <option value="132">هذا المرطب لليد</option>
+                        <option value="133">هذا الشامبو للجسم</option>
+                        <option value="134">هذا الشامبو للشعر</option>
+                        <option value="135">نفس الدواء ولكن شركة بديلة</option>
+                        <option value="136">هذا الدواء متوفر فقط في المستشفى</option>
+                        <option value="137">هذا الدوء غير متوفر حاليا وسيتم توفيره لاحقا</option>
+                        <option value="138">تم سحب هذا الدواء من وزارة الصحة</option>
+                        <option value="139">السستم متعطل فضلا انتظر 5 دقائق</option>
+                        <option value="140">السستم متعطل ارجع للدكتور لكتابة اسم الدواء</option>
+                        <option value="141">لا أعلم متى سيتوفر</option>
+                        <option value="142">لا يوجد لدينا كمادات, يمكنك شرائها من الصيدليات الخاصه</option>
+                        <option value="143">أعتذر منك لقد نفذت منا الأكياس</option>
+                        <option value="144">هذا الدواء مقطوع</option>
+                        <option value="145">هذا الدواء غير متوفر هنا ويجب شرائه من صيدلية خاصه</option>
+                        <option value="146">هذا الدواء لك ام لشخص اخر</option>
+                        <option value="147">راجع الدكتور لتغيير الدواء</option>
+                        <option value="148">يجب أن يفحصك الدكتور</option>
+                        <option value="149">هذا الدواء للكويتيين فقط</option>
+                        <option value="150">يمكنك شرائه من صيدليات خاصه</option>
+                        <option value="151">لا أستطيع صرف أي دواء من غير وصفة</option>
+                        <option value="152">يتم صرف كمية محدده من هذا الدواء لكل شخص ولا يمكنني صرف المزيد</option>
+                        <option value="153">هذه رؤوس الأبر لأقلام السكر</option>
+                        <option value="154">هذه الأبر للأمبولات</option>
+                        <option value="155">كم عمر الطفل</option>
+                        <option value="156">هذه مسحات للكحول الطبيه</option>
+                        <option value="157">مفعول هذا الدواء سريع</option>
+                        <option value="158">مفعول هذا الدواء بطيء</option>
+                        <option value="159">اذهب للصيدلية الرئيسيه</option>
+                        <option value="160">يعبئ في هذه العلبة المحلول وتجده في قسم التمريض</option>
+                        <option value="161">اذهب للصيدلية التخصصيه</option>
+                        <option value="162">اذهب لصيدلية السكر</option>
+                    </select>
+                </div>
+                <div class="col-4">
+                    <button class="btn btn-primary w-100 h-100" onclick="viewVideo()">عرض</button>
+                </div>
+            </div>
+            <div class="row my-3">
+                <button class="btn btn-primary w-100 h-100" onclick="viewVideo()">عرض الكل</button>
+            </div>
+            <div class="row my-3">
+                <video id="vid" controls style="display: none;">
+                    <source id="vidSrc" src="" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+        </div>
+        <script>
+            sel = document.getElementById("te");
+            sel.addEventListener("click", ssBox);
+            function ssBox(){
+                alert("Hello");
+            }
+            function viewVideo(){
+                player = document.getElementById("vid");
+                player.style.display = "block";
+                document.getElementById("vidSrc").setAttribute("src", "/assets/Videos/test.mp4");
+                player.play();
+                player.addEventListener('ended',myHandler,false);
+                
+                function myHandler(e){
+                    if (!e){
+                        e = window.event;
+                    }
+                    document.getElementById("vidSrc").setAttribute("src", "/assets/Videos/test2.mp4");
+                    player.load();
+                    player.play();
+                }
+                
+            }
+
+            
+
+            
+        </script>
+        <script src="bootstrap-5.0.2-dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+        
+    </body>
+</html>
