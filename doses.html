@@ -8,10 +8,11 @@
     </head>
     <body>
         <div class="container-fluid bg-primary text-white">
-            <div class="row py-3">
+            <div class="row py-3 text-center">
                 <h1 class="text-center">
                     برنامج التواصل بين الصيدلية والصم
                 </h1>
+                <a href="index.html" class="btn btn-sm btn-light w-25 text-center mx-auto my-3">home</a>
             </div>
         </div>
         <div class="container">  
@@ -74,11 +75,35 @@
                     </select>
                 </div>
                 <div class="col-4">
-                    <button class="btn btn-primary w-100 h-100">عرض</button>
+                    <button class="btn btn-primary w-100 h-100" onclick="viewVideo()">عرض</button>
                 </div>
             </div>
+            <div class="row my-3">
+                <video id="vid" style="display: none;">
+                    <source id="vidSrc" src="" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
         </div>
-
+        <script>
+            function viewVideo(){
+                player = document.getElementById("vid");
+                player.style.display = "block";
+                document.getElementById("vidSrc").setAttribute("src", "/assets/Videos/test.mp4");
+                player.play();
+                player.addEventListener('ended',myHandler,false);
+                
+                function myHandler(e){
+                    if (!e){
+                        e = window.event;
+                    }
+                    document.getElementById("vidSrc").setAttribute("src", "/assets/Videos/test2.mp4");
+                    player.load();
+                    player.play();
+                }
+                
+            }
+        </script>
         <script src="bootstrap-5.0.2-dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
     </body>
 </html>

@@ -17,6 +17,12 @@
             </div>
         </div>
         <div class="container">
+            <div class="row my-3">
+                <video id="vid" controls style="display: none;">
+                    <source id="vidSrc" src="" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
             <div class="row"><h1>الجرعات</h1></div>
             <div class="row mt-3">
                 <div class="col-3 form-group">
@@ -277,23 +283,15 @@
             <div class="row my-3">
                 <button class="btn btn-primary w-100 h-100" onclick="viewVideo()">عرض الكل</button>
             </div>
-            <div class="row my-3">
-                <video id="vid" controls style="display: none;">
-                    <source id="vidSrc" src="" type="video/mp4">
-                    Your browser does not support the video tag.
-                </video>
-            </div>
+            
         </div>
         <script>
             sel = document.getElementById("te");
-            sel.addEventListener("click", ssBox);
-            function ssBox(){
-                alert("Hello");
-            }
             function viewVideo(){
                 player = document.getElementById("vid");
                 player.style.display = "block";
-                document.getElementById("vidSrc").setAttribute("src", "/assets/Videos/test.mp4");
+                document.getElementById("vid").setAttribute("src", "assets/Videos/test1.mp4");
+
                 player.play();
                 player.addEventListener('ended',myHandler,false);
                 
@@ -301,9 +299,11 @@
                     if (!e){
                         e = window.event;
                     }
-                    document.getElementById("vidSrc").setAttribute("src", "/assets/Videos/test2.mp4");
+                    document.getElementById("vid").setAttribute("src", "/assets/Videos/test.mp4");
                     player.load();
                     player.play();
+                    player.style.display = "none";
+
                 }
                 
             }
