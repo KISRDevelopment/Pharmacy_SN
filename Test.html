@@ -291,11 +291,11 @@
             sel = document.getElementById("te");
 
             function viewVideo(){
-
+                i = [number.value];
                 player = document.getElementById("vid");
                 player.style.display = "block";
-                if (number.value == 34) {
-                    player.setAttribute("src", "assets/Videos/test1.mp4");
+                if (number.value == i) {
+                    player.setAttribute("src", "assets/Videos/34.mp4");
                     player.play();
                     player.addEventListener('ended',myHandler,false);
                 
@@ -308,8 +308,7 @@
                     //player.setAttribute("src", "/assets/Videos/test.mp4");
                     //player.load();
                     //player.play();
-                   // player.style.display = "block";
-
+                    //player.style.display = "block";
                 }
                 
             }
