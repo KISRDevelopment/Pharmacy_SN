@@ -39,7 +39,7 @@
                 </div>
                 <div class="col-3 form-group">
                     <label class="pb-1">العدد</label>
-                    <select class="form-select">
+                    <select class="form-select" id="number">
                         <option value="0" disabled selected>اختر العدد</option>
                         <option value="34">1</option>
                         <option value="35">3</option>
@@ -118,7 +118,7 @@
                     </select>
                 </div>
                 <div class="col-4">
-                    <button class="btn btn-primary w-100 h-100" onclick="viewVideo()">عرض</button>
+                    <button class="btn btn-primary w-100 h-100" id="dosesBtn" onclick="viewVideo()">عرض</button>
                 </div>
             </div>
             <hr>
@@ -285,31 +285,34 @@
             </div>
             
         </div>
+
         <script>
+
             sel = document.getElementById("te");
+
             function viewVideo(){
+
                 player = document.getElementById("vid");
                 player.style.display = "block";
-                document.getElementById("vid").setAttribute("src", "assets/Videos/test1.mp4");
-
-                player.play();
-                player.addEventListener('ended',myHandler,false);
+                if (number.value == 34) {
+                    player.setAttribute("src", "assets/Videos/test1.mp4");
+                    player.play();
+                    player.addEventListener('ended',myHandler,false);
+                
+                }
                 
                 function myHandler(e){
                     if (!e){
                         e = window.event;
                     }
-                    document.getElementById("vid").setAttribute("src", "/assets/Videos/test.mp4");
-                    player.load();
-                    player.play();
-                    player.style.display = "none";
+                    //player.setAttribute("src", "/assets/Videos/test.mp4");
+                    //player.load();
+                    //player.play();
+                   // player.style.display = "block";
 
                 }
                 
             }
-
-            
-
             
         </script>
         <script src="bootstrap-5.0.2-dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
