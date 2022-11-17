@@ -35,5 +35,5 @@
 title Pharmacy batch script
 cd \Users\nsnayen\Desktop\Web
 start python -m http.server &
-explorer http://localhost:8000/Test.html
+explorer http://localhost:8000/
 pause
