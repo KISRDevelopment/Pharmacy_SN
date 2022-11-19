@@ -27,7 +27,7 @@
             <div class="row mt-3">
                 <div class="col-3 form-group">
                     <label class="pb-1">نوع الدواء</label>
-                    <select class="form-select" id="te">
+                    <select id="med" class="form-select">
                         <option value="0" disabled selected>اختر النوع</option>
                         <option>حبوب</option>
                         <option>تحاميل</option>
@@ -39,7 +39,7 @@
                 </div>
                 <div class="col-3 form-group">
                     <label class="pb-1">العدد</label>
-                    <select class="form-select">
+                    <select id="num" class="form-select">
                         <option value="0" disabled selected>اختر العدد</option>
                         <option value="34">1</option>
                         <option value="35">3</option>
@@ -60,7 +60,7 @@
                 </div>
                 <div class="col-3 form-group">
                     <label class="pb-1">المقدار</label>
-                    <select class="form-select">
+                    <select id="dose" class="form-select">
                         <option value="0" disabled selected>اختر المقدار</option>
                         <option value="20">مل</option>
                         <option value="21">بخة</option>
@@ -80,7 +80,7 @@
                 </div>
                 <div class="col-3 form-group">
                     <label class="pb-1">التكرار</label>
-                    <select class="form-select">
+                    <select id="rep" class="form-select">
                         <option value="0" disabled selected>اختر التكرار</option>
                         <option value="1">٤ ساعات</option>
                         <option value="2"> ٨ ساعات</option>
@@ -94,7 +94,7 @@
             <div class="row mt-3">
                 <div class="col-4 form-group">
                     <label class="pb-1">المدة</label>
-                    <select class="form-select">
+                    <select id="period" class="form-select">
                         <option value="0" disabled selected>اختر المدة</option>
                         <option value="7">يوم</option>
                         <option value="8">يومين</option>
@@ -107,7 +107,7 @@
                 </div>
                 <div class="col-4 form-group">
                     <label class="pb-1">الوقت</label>
-                    <select class="form-select">
+                    <select id="time" class="form-select">
                         <option value="0" disabled selected>اختر الوقت</option>
                         <option value="14">قبل الاكل</option>
                         <option value="15">بعد الاكل</option>
@@ -118,7 +118,7 @@
                     </select>
                 </div>
                 <div class="col-4">
-                    <button class="btn btn-primary w-100 h-100" onclick="viewVideo()">عرض</button>
+                    <button id="first" class="btn btn-primary w-100 h-100" onclick="callVideo(this.id)">عرض</button>
                 </div>
             </div>
             <hr>
@@ -126,7 +126,7 @@
             <div class="row">
                 <div class="col-8">
                     <label class="pb-1">طريقة الاستخدام</label>
-                    <select class="form-select">
+                    <select id="use" class="form-select">
                         <option value="0" disabled selected>اختر طريقة الاستخدام</option>
                         <option value="72">تبخ منه على المنطقه ثم يترك حتى ينشف</option>
                         <option value="73">يوضع داخل العين كمية صغيرة</option>
@@ -155,15 +155,15 @@
                     </select>
                 </div>
                 <div class="col-4">
-                    <button class="btn btn-primary w-100 h-100" onclick="viewVideo()">عرض</button>
+                    <button id="second" class="btn btn-primary w-100 h-100" onclick="callVideo(this.id)">عرض</button>
                 </div>
             </div>
             <hr>
             <div class="row"><h1>تعليمات خاصة</h1></div>
             <div class="row">
-                <div class="col-4">
+                <div class="col-8">
                     <label class="pb-1">تعليمات خاصة</label>
-                    <select class="form-select">
+                    <select id="special1" class="form-select">
                         <option value="0" disabled selected>اختر التعليمات الخاصة</option>
                         <option value="49">لا يخلط الكريم مع غيره</option>
                         <option value="50">لا يخلط الكريم مع المرهم</option>
@@ -180,9 +180,12 @@
                         <option value="61">فروة الرأس يجب أن تكون مبللة</option>
                     </select>
                 </div>
-                <div class="col-4">
+            </div>
+            <br>
+            <div class="row">
+                <div class="col-8">
                     <label class="pb-1">تعليمات خاصة مشتركة</label>
-                    <select class="form-select">
+                    <select id="special2" class="form-select">
                         <option value="0" disabled selected>اختر التعليمات المشتركة</option>
                         <option value="62">هذا الدواء يسبب النعاس</option>
                         <option value="63">لا يخلط</option>
@@ -197,7 +200,7 @@
                     </select>
                 </div>
                 <div class="col-4">
-                    <button class="btn btn-primary w-100 h-100" onclick="viewVideo()">عرض</button>
+                    <button id="third" class="btn btn-primary w-100 h-100" onclick="callVideo(this.id)">عرض</button>
                 </div>
             </div>
             <hr>
@@ -205,7 +208,7 @@
             <div class="row">
                 <div class="col-8">
                     <label class="pb-1">تعليمات عامة</label>
-                    <select class="form-select">
+                    <select id="general" class="form-select">
                         <option value="0" disabled selected>اختر التعليمات العامة</option>
                         <option value="96">هذا الكريم للجروح</option>
                         <option value="97">هذا الكريم للحبوب</option>
@@ -277,39 +280,73 @@
                     </select>
                 </div>
                 <div class="col-4">
-                    <button class="btn btn-primary w-100 h-100" onclick="viewVideo()">عرض</button>
+                    <button id="fourth" class="btn btn-primary w-100 h-100" onclick="callVideo(this.id)">عرض</button>
                 </div>
             </div>
             <div class="row my-3">
-                <button class="btn btn-primary w-100 h-100" onclick="viewVideo()">عرض الكل</button>
+                <button id="all" class="btn btn-primary w-100 h-100" onclick="callVideo(this.id)">عرض الكل</button>
             </div>
             
         </div>
         <script>
-            sel = document.getElementById("te");
-            function viewVideo(){
-                player = document.getElementById("vid");
-                player.style.display = "block";
-                document.getElementById("vid").setAttribute("src", "assets/Videos/test1.mp4");
-
-                player.play();
-                player.addEventListener('ended',myHandler,false);
-                
-                function myHandler(e){
-                    if (!e){
-                        e = window.event;
-                    }
-                    document.getElementById("vid").setAttribute("src", "/assets/Videos/test.mp4");
-                    player.load();
-                    player.play();
-                    player.style.display = "none";
-
+            var currentVideo = 0;
+            var videos = [];
+            function callVideo(i){
+                currentVideo = 0;
+                videos = [];
+                if (i=="first" || i=="all") {
+                    //videos.push(document.getElementById("med").value);
+                    videos.push(document.getElementById("num").value);
+                    videos.push(document.getElementById("dose").value);
+                    videos.push(document.getElementById("rep").value);
+                    videos.push(document.getElementById("period").value);
+                    videos.push(document.getElementById("time").value);
                 }
-                
+                if (i=="second" || i=="all") {
+                    videos.push(document.getElementById("use").value);
+                }
+                if (i=="third" || i=="all") {
+                    videos.push(document.getElementById("special1").value);
+                    videos.push(document.getElementById("special2").value);
+                }
+                if (i=="fourth" || i=="all") {
+                    videos.push(document.getElementById("general").value);
+                }
+                viewVideos();
             }
 
-            
+            function viewVideos(){
+                while (videos[currentVideo] ==="0" && (currentVideo !== videos.length)){
+                    currentVideo++;
+                }
+                if (currentVideo < videos.length){
+                    player = document.getElementById("vid");
+                    document.getElementById("vid").setAttribute("src", "assets/Videos/" + videos[currentVideo] + ".mov");
+                    player.focus();
+                    player.style.display = "block";
+                    player.play();
+                    currentVideo++;
+                    player.addEventListener('ended',myHandler,false);
+                }
+            }
 
+            function myHandler(e){
+                if (!e){
+                    e = window.event;
+                }
+                while (videos[currentVideo] =="0" && (currentVideo < videos.length)){
+                    currentVideo++;
+                }
+                if (currentVideo < videos.length){
+                    document.getElementById("vid").setAttribute("src", "assets/Videos/" + videos[currentVideo] + ".mov");
+                    player.focus();
+                    player.play();
+                    currentVideo++;
+                }
+                else{
+                    player.style.display = "none";
+                }
+            }
             
         </script>
         <script src="bootstrap-5.0.2-dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
