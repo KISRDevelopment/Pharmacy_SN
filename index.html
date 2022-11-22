@@ -323,6 +323,7 @@
                     player = document.getElementById("vid");
                     document.getElementById("vid").setAttribute("src", "assets/Videos/" + videos[currentVideo] + ".mov");
                     player.focus();
+                    player.height=screen.height*0.8;
                     player.style.display = "block";
                     player.play();
                     currentVideo++;
