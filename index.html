@@ -27,7 +27,7 @@
             <div class="row mt-3">
                 <div class="col-4 form-group">
                     <label class="pb-1">نوع الدواء</label>
-                    <select id="med" class="form-select" onchange="med()">
+                    <select id="med" class="form-select" onchange="med(); moveup(id);">
                         <option value="0">لا يوجد</option>
                         <option value="30">حبوب</option>
                         <option value="204">شراب</option>
@@ -40,7 +40,7 @@
                 </div>
                 <div class="col-4 form-group" style="display: block">
                     <label class="pb-1">الكمية</label>
-                    <select id="num" class="form-select">
+                    <select id="num" class="form-select" onchange="moveup(id);">
                             <option value="0">لا يوجد</option>
 <!--                        <option value="34">1</option>-->
 <!--                        <option value="0">2</option>-->
@@ -76,7 +76,7 @@
 <!--                </div>-->
                 <div class="col-4 form-group">
                     <label class="pb-1">التكرار</label>
-                    <select id="rep" class="form-select">
+                    <select id="rep" class="form-select" onchange="moveup(id);">
                         <option value="0">لا يوجد</option>
                         <option value="0">ساعتين</option>
                         <option value="1">٤ ساعات</option>
@@ -93,7 +93,7 @@
             <div class="row mt-3">
                 <div class="col-4 form-group">
                     <label class="pb-1">المدة</label>
-                    <select id="period" class="form-select">
+                    <select id="period" class="form-select" onchange="moveup(id)";>
                         <option value="0">لا يوجد</option>
                         <option value="7">يوم</option>
                         <option value="8">يومين</option>
@@ -107,7 +107,7 @@
                 </div>
                 <div class="col-4 form-group">
                     <label class="pb-1">الوقت</label>
-                    <select id="time" class="form-select">
+                    <select id="time" class="form-select" onchange="moveup(id);">
                         <option value="0">لا يوجد</option>
                         <option value="14">قبل الاكل</option>
                         <option value="15">بعد الاكل</option>
@@ -126,7 +126,7 @@
             <div class="row">
                 <div class="col-8">
                     <label class="pb-1">طريقة الاستخدام</label>
-                    <select id="use" class="form-select">
+                    <select id="use" class="form-select" onchange="moveup(id);">
                         <option value="0">لا يوجد</option>
                         <option value="72">تبخ منه على المنطقه ثم يترك حتى ينشف</option>
                         <option value="73">يوضع داخل العين كمية صغيرة</option>
@@ -163,7 +163,7 @@
             <div class="row">
                 <div class="col-8">
                     <label class="pb-1">تعليمات خاصة</label>
-                    <select id="special1" class="form-select">
+                    <select id="special1" class="form-select" onchange="moveup(id);">
                         <option value="0">لا يوجد</option>
                         <option value="49">لا يخلط الكريم مع غيره</option>
                         <option value="50">لا يخلط الكريم مع المرهم</option>
@@ -185,7 +185,7 @@
             <div class="row">
                 <div class="col-8">
                     <label class="pb-1">تعليمات خاصة مشتركة</label>
-                    <select id="special2" class="form-select">
+                    <select id="special2" class="form-select" onchange="moveup(id);">
                         <option value="0">لا يوجد</option>
                         <option value="62">هذا الدواء يسبب النعاس</option>
                         <option value="63">لا يخلط</option>
@@ -208,7 +208,7 @@
             <div class="row">
                 <div class="col-8">
                     <label class="pb-1">تعليمات عامة</label>
-                    <select id="general" class="form-select">
+                    <select id="general" class="form-select" onchange="moveup(id);">
                         <option value="0">لا يوجد</option>
                         <option value="96">هذا الكريم للجروح</option>
                         <option value="97">هذا الكريم للحبوب</option>
@@ -385,6 +385,11 @@
                     player.style.display = "none";
                 }
             }
+
+
+           function moveup(id){
+                document.getElementById(id).insertBefore(document.getElementById(id).options[document.getElementById(id).selectedIndex],document.getElementById(id).children[1]);
+           }
             
         </script>
         <script src="bootstrap-5.0.2-dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
