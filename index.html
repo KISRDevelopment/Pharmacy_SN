@@ -347,7 +347,7 @@
                     options = [["لا يوجد","0"],["1","34"]];
                 }
                 else{
-                    options =[];
+                    options =[["لا يوجد","0"]];
                 }
                 document.getElementById("num").innerHTML = options.map(x => `<option value=${x[1]}>${x[0]}</option>`).join('\n');
             }
@@ -388,14 +388,15 @@
             }
 
             function viewVideos(){
+                console.log(videos);
+                player.height=screen.height*0.8;
+                player.style.display = "block";
+                player.focus();
                 while (videos[currentVideo] =="0" && (currentVideo !== videos.length)){
                     currentVideo++;
                 }
                 if (currentVideo < videos.length){
                     document.getElementById("vid").setAttribute("src", "assets/Videos/" + videos[currentVideo] + ".mov");
-                    player.focus();
-                    player.height=screen.height*0.8;
-                    player.style.display = "block";
                     player.play();
                     currentVideo++;
                     player.addEventListener('ended',myHandler,false);
@@ -411,7 +412,6 @@
                 }
                 if (currentVideo < videos.length){
                     document.getElementById("vid").setAttribute("src", "assets/Videos/" + videos[currentVideo] + ".mov");
-                    player.focus();
                     player.play();
                     currentVideo++;
                 }
