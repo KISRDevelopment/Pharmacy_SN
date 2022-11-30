@@ -5,3 +5,10 @@
 	padding: 20px 10px;
 }
 
+.bg-primary {
+	background-color: #0583E8!important;
+}
+
+.text-center {
+	color: black;
+}
