@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<script type="text/javascript" src="ph_dict.js"></script>
 <html lang="ar" dir="rtl">
     <head>
         <meta charset="utf-8">
@@ -283,14 +284,44 @@
                     <button id="fourth" class="btn btn-primary w-100 h-100" onclick="callVideo(this.id)">عرض</button>
                 </div>
             </div>
+            <hr>
+            <div class="row"><h1>متفرقات</h1></div>
+            <div class="row">
+                <div class="col-8">
+                    <label class="pb-1">متفرقات</label>
+                    <select id="other" class="form-select" onchange="moveup(id);">
+                        <option value="0">لا يوجد</option>
+                    </select>
+                </div>
+                <div class="col-4">
+                    <button id="otherB" class="btn btn-primary w-100 h-100" onclick="callVideo(this.id)">عرض</button>
+                </div>
+            </div>
             <div class="row my-3">
                 <button id="all" class="btn btn-primary w-100 h-100" onclick="callVideo(this.id)">عرض الكل</button>
             </div>
             
         </div>
         <script>
+            let options = [];
+            //Construct the menu from dict (ph_dic.js)
+            options = [["لا يوجد","0"]];
+            for (let i= 163; i < 210; i++){
+                options.push([dict[i],i]);
+            }
+            for (let i= 211; i < 221; i++){
+                options.push([dict[i],i]);
+            }
+            for (let i= 224; i < 269; i++){
+                options.push([dict[i],i]);
+            }
+            for (let i= 284; i < 287; i++){
+                options.push([dict[i],i]);
+            }
+            document.getElementById("other").innerHTML = options.map(x => `<option value=${x[1]}>${x[0]}</option>`).join('\n');
+
             function med() {
-                let options = [];
+                options = [];
                 for(let i = document.getElementById("num").options.length-1; i >= 0; i--) {
                     document.getElementById("num").remove(i);
                 }
@@ -349,6 +380,9 @@
                 }
                 if (i=="fourth" || i=="all") {
                     videos.push(document.getElementById("general").value);
+                }
+                if (i=="otherB" || i=="all") {
+                    videos.push(document.getElementById("other").value);
                 }
                 viewVideos();
             }
