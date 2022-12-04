@@ -29,12 +29,14 @@ h1 {
 }
 
 .btn-primary {
-    background-color:#29aed3!important; 
+    background-color:lightgray!important; 
     color: black;
     font-weight: bold;
     border-radius: 10px;
     width: 50px;
     height: 50px;
+    border: none;
+    
 }
 
 label {
