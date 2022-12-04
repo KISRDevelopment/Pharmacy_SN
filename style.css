@@ -10,3 +10,8 @@
     background-color: #0583E8!important;
     
 }
+
+h1.text-center {
+    color: black;
+    font-family: sans-serif;
+}
