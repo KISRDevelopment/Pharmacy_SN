@@ -1,14 +1,12 @@
 
 
-.logo {
-	width: 185px;
-	padding: 20px 10px;
-}
-
 .bg-primary {
-	background-color: #0583E8!important;
-}
-
-.text-center {
-	color: black;
+    background-image: url("assets/Image/kisr.jpg");
+    background-repeat: no-repeat;
+    background-position: right;
+    background-size: 185px;
+    padding: 20px 10px;
+    background-origin: content-box;
+    background-color: #0583E8!important;
+    
 }
