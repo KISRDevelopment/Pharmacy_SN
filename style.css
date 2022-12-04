@@ -7,7 +7,7 @@
     background-size: 185px;
     padding: 20px 10px;
     background-origin: content-box;
-    background-color: ##0059a0!important;
+    background-color: #0059a0!important;
     
 }
 
@@ -29,7 +29,7 @@ h1 {
 }
 
 .btn-primary {
-    background-color:##29aed3!important; 
+    background-color:#29aed3!important; 
     color: black;
     font-weight: bold;
     border-radius: 10px;
