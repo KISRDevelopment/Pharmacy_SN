@@ -65,3 +65,11 @@ select {
     background-color: #016b88!important;
     border-color: #285e8e; /*set the color you want here*/
 }
+
+select:hover, select:focus, select:active {
+    border-color: #87c7fa!important;
+}
+
+select {
+    border-color: #87c7fa!important;
+}
