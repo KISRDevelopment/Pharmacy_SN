@@ -63,7 +63,7 @@ select {
 .btn-primary:hover, .btn-primary:focus, .btn-primary:active, .btn-primary.active, .open>.dropdown-toggle.btn-primary {
     color: #fff;
     background-color: #016b88!important;
-    border-color: #285e8e; /*set the color you want here*/
+    border-color: #285e8e; 
 }
 
 select:hover, select:focus, select:active {
@@ -72,4 +72,10 @@ select:hover, select:focus, select:active {
 
 select {
     border-color: #87c7fa!important;
+}
+
+#lastButton:hover {
+    color: #fff;
+    background-color: #016b88!important;
+    border-color: #285e8e; 
 }
