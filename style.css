@@ -51,3 +51,9 @@ label {
     left: 50%!important;
     
 }
+
+select {
+    font-family: serif;
+    font-size: 16px!important;
+    
+}
