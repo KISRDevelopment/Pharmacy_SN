@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<script type="text/javascript" src="ph_dict.js"></script>
 <html lang="ar" dir="rtl">
     <head>
         <meta charset="utf-8">
@@ -25,80 +26,80 @@
             </div>
             <div class="row"><h1>الجرعات</h1></div>
             <div class="row mt-3">
-                <div class="col-3 form-group">
+                <div class="col-4 form-group">
                     <label class="pb-1">نوع الدواء</label>
-                    <select class="form-select" id="te">
-                        <option value="0" disabled selected>اختر النوع</option>
-                        <option>حبوب</option>
-                        <option>تحاميل</option>
-                        <option>كريمات</option>
-                        <option>شراب</option>
-                        <option>بخاخ</option>
-                        <option>قطرات</option>
+                    <select id="med" class="form-select" onchange="med(); moveup(id);">
+                        <option value="0">لا يوجد</option>
+                        <option value="30">حبوب</option>
+                        <option value="204">شراب</option>
+                        <option value="21">بخاخ</option>
+                        <option value="24">قطرات</option>
+                        <option value="206">كريم</option>
+                        <option value="33">تحاميل</option>
+                        <option value="254">إبر</option>
                     </select>
                 </div>
-                <div class="col-3 form-group">
-                    <label class="pb-1">العدد</label>
-                    <select class="form-select">
-                        <option value="0" disabled selected>اختر العدد</option>
-                        <option value="34">1</option>
-                        <option value="35">3</option>
-                        <option value="36">4</option>
-                        <option value="37">5</option>
-                        <option value="38">6</option>
-                        <option value="39">7</option>
-                        <option value="40">8</option>
-                        <option value="41">9</option>
-                        <option value="42">10</option>
-                        <option value="43">15</option>
-                        <option value="44">20</option>
-                        <option value="45">25</option>
-                        <option value="46">50</option>
-                        <option value="47">75</option>
-                        <option value="48">100</option>
+                <div class="col-4 form-group" style="display: block">
+                    <label class="pb-1">الكمية</label>
+                    <select id="num" class="form-select" onchange="moveup(id);">
+                            <option value="0">لا يوجد</option>
+<!--                        <option value="34">1</option>-->
+<!--                        <option value="0">2</option>-->
+<!--                        <option value="35">3</option>-->
+<!--                        <option value="36">4</option>-->
+<!--                        <option value="37">5</option>-->
+<!--                        <option value="38">6</option>-->
+<!--                        <option value="39">7</option>-->
+<!--                        <option value="40">8</option>-->
+<!--                        <option value="41">9</option>-->
+<!--                        <option value="42">10</option>-->
                     </select>
                 </div>
-                <div class="col-3 form-group">
-                    <label class="pb-1">المقدار</label>
-                    <select class="form-select">
-                        <option value="0" disabled selected>اختر المقدار</option>
-                        <option value="20">مل</option>
-                        <option value="21">بخة</option>
-                        <option value="22">بختين</option>
-                        <option value="23">بخات</option>
-                        <option value="24">قطرة</option>
-                        <option value="25">قطرتين</option>
-                        <option value="26">قطرات</option>
-                        <option value="27">مرة</option>
-                        <option value="28">مرتين</option>
-                        <option value="29">مرات</option>
-                        <option value="30">حبة</option>
-                        <option value="31">حبتين</option>
-                        <option value="32">حبات</option>
-                        <option value="33">تحميلة</option>
-                    </select>
-                </div>
-                <div class="col-3 form-group">
+<!--                <div class="col-3 form-group">-->
+<!--                    <label class="pb-1">المقدار</label>-->
+<!--                    <select id="dose" class="form-select">-->
+<!--                        <option value="0">لا يوجد</option>-->
+<!--                        <option value="20">مل</option>-->
+<!--                        <option value="21">بخة</option>-->
+<!--                        <option value="22">بختين</option>-->
+<!--                        <option value="23">بخات</option>-->
+<!--                        <option value="24">قطرة</option>-->
+<!--                        <option value="25">قطرتين</option>-->
+<!--                        <option value="26">قطرات</option>-->
+<!--                        <option value="27">مرة</option>-->
+<!--                        <option value="28">مرتين</option>-->
+<!--                        <option value="29">مرات</option>-->
+<!--                        <option value="30">حبة</option>-->
+<!--                        <option value="31">حبتين</option>-->
+<!--                        <option value="32">حبات</option>-->
+<!--                        <option value="33">تحميلة</option>-->
+<!--                    </select>-->
+<!--                </div>-->
+                <div class="col-4 form-group">
                     <label class="pb-1">التكرار</label>
-                    <select class="form-select">
-                        <option value="0" disabled selected>اختر التكرار</option>
+                    <select id="rep" class="form-select" onchange="moveup(id);">
+                        <option value="0">لا يوجد</option>
+                        <option value="0">ساعتين</option>
                         <option value="1">٤ ساعات</option>
                         <option value="2"> ٨ ساعات</option>
                         <option value="3">٦ ساعات</option>
                         <option value="4">١٢ ساعة</option>
+                        <option value="6">مرة باليوم</option>
+                        <option value="0">٣ مرات باليوم</option>
+                        <option value="0">٥ مرات باليوم</option>
                         <option value="5">عند اللزوم</option>
-                        <option value="6">يوميا</option>
                     </select>
                 </div>
             </div>
             <div class="row mt-3">
                 <div class="col-4 form-group">
                     <label class="pb-1">المدة</label>
-                    <select class="form-select">
-                        <option value="0" disabled selected>اختر المدة</option>
+                    <select id="period" class="form-select" onchange="moveup(id)";>
+                        <option value="0">لا يوجد</option>
                         <option value="7">يوم</option>
                         <option value="8">يومين</option>
-                        <option value="9">ايام</option>
+                        <option value="9">٣ ايام</option>
+                        <option value="9">٥ ايام</option>
                         <option value="10">اسبوع</option>
                         <option value="11">اسبوعين</option>
                         <option value="12">شهر</option>
@@ -107,8 +108,8 @@
                 </div>
                 <div class="col-4 form-group">
                     <label class="pb-1">الوقت</label>
-                    <select class="form-select">
-                        <option value="0" disabled selected>اختر الوقت</option>
+                    <select id="time" class="form-select" onchange="moveup(id);">
+                        <option value="0">لا يوجد</option>
                         <option value="14">قبل الاكل</option>
                         <option value="15">بعد الاكل</option>
                         <option value="16">اثناء الاكل</option>
@@ -118,7 +119,7 @@
                     </select>
                 </div>
                 <div class="col-4">
-                    <button class="btn btn-primary w-100 h-100" onclick="viewVideo()">عرض</button>
+                    <button id="first" class="btn btn-primary w-100 h-100" onclick="callVideo(this.id)">عرض</button>
                 </div>
             </div>
             <hr>
@@ -126,8 +127,8 @@
             <div class="row">
                 <div class="col-8">
                     <label class="pb-1">طريقة الاستخدام</label>
-                    <select class="form-select">
-                        <option value="0" disabled selected>اختر طريقة الاستخدام</option>
+                    <select id="use" class="form-select" onchange="moveup(id);">
+                        <option value="0">لا يوجد</option>
                         <option value="72">تبخ منه على المنطقه ثم يترك حتى ينشف</option>
                         <option value="73">يوضع داخل العين كمية صغيرة</option>
                         <option value="74">يوضع على الجفن كمية صغيرة</option>
@@ -143,28 +144,28 @@
                         <option value="84">تدهن في اتجاه واحد او على شكل دائري</option>
                         <option value="85">يوضع هذا الدواء لمدة 5 دقائق ثم يغسل</option>
                         <option value="86">يوضع هذا الدواء لمدة 10 دقائق ثم يغسل</option>
-                        <option value="87">يغسل الشعر بالشامبو ويترك لمدة نصف ساعه ثم يشطف ويمشط الشعر في مشط خاص للجرب يمكن شرائه من  صيدلية خارجية</option>
-                        <option value="88">يأخذ على الريق , عدم أخذ أي أدوية اخرى معه , شرب كوب ماء مع الجلوس لمدة 30 دقيقة وبعد أكل وجبة يمكن النوم 30 دقيقة</option>
+                        <option value="87">شامبو القمل</option>
+                        <option value="88">دواء الهشاشة</option>
                         <option value="89">يؤخذ قبل النوم مع عدم القيام المفاجئ</option>
-                        <option value="90">يوضع من هذا الغسول ملعقة كبيرة على لتر ماء ثم يشطف</option>
-                        <option value="91">استنشاقه مثل الوضوء أو باستخدام ابره صغيره داخل الأنف والابر المخصصه متوفرة عند الممرض</option>
+                        <option value="90">غسول للنساء</option>
+                        <option value="91">غسول الأنف</option>
                         <option value="92">تدليك مكان الألم</option>
                         <option value="93">تدليك فروة الرأس</option>
-                        <option value="94">يبرد الظفر ويعقم قبل استخدام الدواء</option>
+                        <option value="94">فطريات الأظافر</option>
                         <option value="95">يمكن أخذه بعد الغداء بساعتين وفالليل تأخذ الفيتامينات لتجنب التعارض بينهم</option>
                     </select>
                 </div>
                 <div class="col-4">
-                    <button class="btn btn-primary w-100 h-100" onclick="viewVideo()">عرض</button>
+                    <button id="second" class="btn btn-primary w-100 h-100" onclick="callVideo(this.id)">عرض</button>
                 </div>
             </div>
             <hr>
             <div class="row"><h1>تعليمات خاصة</h1></div>
             <div class="row">
-                <div class="col-4">
+                <div class="col-8">
                     <label class="pb-1">تعليمات خاصة</label>
-                    <select class="form-select">
-                        <option value="0" disabled selected>اختر التعليمات الخاصة</option>
+                    <select id="special1" class="form-select" onchange="moveup(id);">
+                        <option value="0">لا يوجد</option>
                         <option value="49">لا يخلط الكريم مع غيره</option>
                         <option value="50">لا يخلط الكريم مع المرهم</option>
                         <option value="51">لا يستخدم للوجه</option>
@@ -180,10 +181,13 @@
                         <option value="61">فروة الرأس يجب أن تكون مبللة</option>
                     </select>
                 </div>
-                <div class="col-4">
+            </div>
+            <br>
+            <div class="row">
+                <div class="col-8">
                     <label class="pb-1">تعليمات خاصة مشتركة</label>
-                    <select class="form-select">
-                        <option value="0" disabled selected>اختر التعليمات المشتركة</option>
+                    <select id="special2" class="form-select" onchange="moveup(id);">
+                        <option value="0">لا يوجد</option>
                         <option value="62">هذا الدواء يسبب النعاس</option>
                         <option value="63">لا يخلط</option>
                         <option value="64">ممكن ان يخلط</option>
@@ -197,7 +201,7 @@
                     </select>
                 </div>
                 <div class="col-4">
-                    <button class="btn btn-primary w-100 h-100" onclick="viewVideo()">عرض</button>
+                    <button id="third" class="btn btn-primary w-100 h-100" onclick="callVideo(this.id)">عرض</button>
                 </div>
             </div>
             <hr>
@@ -205,8 +209,8 @@
             <div class="row">
                 <div class="col-8">
                     <label class="pb-1">تعليمات عامة</label>
-                    <select class="form-select">
-                        <option value="0" disabled selected>اختر التعليمات العامة</option>
+                    <select id="general" class="form-select" onchange="moveup(id);">
+                        <option value="0">لا يوجد</option>
                         <option value="96">هذا الكريم للجروح</option>
                         <option value="97">هذا الكريم للحبوب</option>
                         <option value="98">هذا الكريم للدوالي</option>
@@ -277,39 +281,149 @@
                     </select>
                 </div>
                 <div class="col-4">
-                    <button class="btn btn-primary w-100 h-100" onclick="viewVideo()">عرض</button>
+                    <button id="fourth" class="btn btn-primary w-100 h-100" onclick="callVideo(this.id)">عرض</button>
+                </div>
+            </div>
+            <hr>
+            <div class="row"><h1>متفرقات</h1></div>
+            <div class="row">
+                <div class="col-8">
+                    <label class="pb-1">متفرقات</label>
+                    <select id="other" class="form-select" onchange="moveup(id);">
+                        <option value="0">لا يوجد</option>
+                    </select>
+                </div>
+                <div class="col-4">
+                    <button id="otherB" class="btn btn-primary w-100 h-100" onclick="callVideo(this.id)">عرض</button>
                 </div>
             </div>
             <div class="row my-3">
-                <button id="lastButton" class="btn btn-primary w-100 h-100" onclick="viewVideo()">عرض الكل</button>
+                <button id="all" class="btn btn-primary w-100 h-100" onclick="callVideo(this.id)">عرض الكل</button>
             </div>
             
         </div>
         <script>
-            sel = document.getElementById("te");
-            function viewVideo(){
-                player = document.getElementById("vid");
-                player.style.display = "block";
-                document.getElementById("vid").setAttribute("src", "assets/Videos/test1.mp4");
+            let options = [];
+            //Construct the menu from dict (ph_dic.js)
+            options = [["لا يوجد","0"]];
+            for (let i= 163; i < 210; i++){
+                options.push([dict[i],i]);
+            }
+            for (let i= 211; i < 221; i++){
+                options.push([dict[i],i]);
+            }
+            for (let i= 224; i < 269; i++){
+                options.push([dict[i],i]);
+            }
+            for (let i= 284; i < 287; i++){
+                options.push([dict[i],i]);
+            }
+            document.getElementById("other").innerHTML = options.map(x => `<option value=${x[1]}>${x[0]}</option>`).join('\n');
 
-                player.play();
-                player.addEventListener('ended',myHandler,false);
-                
-                function myHandler(e){
-                    if (!e){
-                        e = window.event;
-                    }
-                    document.getElementById("vid").setAttribute("src", "/assets/Videos/test.mp4");
-                    player.load();
-                    player.play();
-                    player.style.display = "none";
-
+            function med() {
+                options = [];
+                for(let i = document.getElementById("num").options.length-1; i >= 0; i--) {
+                    document.getElementById("num").remove(i);
                 }
-                
+                if (document.getElementById("med").options[document.getElementById("med").selectedIndex].text === "حبوب") {
+                    options = [["لا يوجد","0"], ["1","34"],["2","0"],["3","35"],["4","36"],["5","37"],["6","38"],["7","39"],["8","40"],["9","41"],["10","42"]];
+                }
+                else if (document.getElementById("med").options[document.getElementById("med").selectedIndex].text === "شراب") {
+                    options = [["لا يوجد","0"],["1","34"],["2","0"],["2.5","0"],["3","35"],["4","36"],["5","37"],["6","38"],["7","39"],["7.5","0"],["8","40"],["9","41"],["10","42"],["15","43"],["20","44"],["25","45"],["50","46"],["75","47"],["100","48"]];
+                }
+                else if (document.getElementById("med").options[document.getElementById("med").selectedIndex].text === "بخاخ") {
+                    options = [["لا يوجد","0"],["1","34"],["2","0"],["3","35"]];
+                }
+                else if (document.getElementById("med").options[document.getElementById("med").selectedIndex].text === "قطرات") {
+                    options = [["لا يوجد","0"],["1","34"],["2","0"],["3","35"]];
+                }
+                else if (document.getElementById("med").options[document.getElementById("med").selectedIndex].text === "كريم") {
+                    options = [["لا يوجد","0"]];
+                }
+                else if (document.getElementById("med").options[document.getElementById("med").selectedIndex].text === "تحاميل") {
+                    options = [["لا يوجد","0"],["1","34"]];
+                }
+                else if (document.getElementById("med").options[document.getElementById("med").selectedIndex].text === "إبر") {
+                    options = [["لا يوجد","0"],["1","34"]];
+                }
+                else{
+                    options =[["لا يوجد","0"]];
+                }
+                document.getElementById("num").innerHTML = options.map(x => `<option value=${x[1]}>${x[0]}</option>`).join('\n');
             }
 
-            
+            let currentVideo = 0;
+            let videos = [];
+            let player = document.getElementById("vid");
+            function callVideo(i){
+                currentVideo = 0;
+                videos = [];
+                if (i=="first" || i=="all") {
+                    videos.push(document.getElementById("med").value);
+                    videos.push(document.getElementById("num").value);
+                    if (document.getElementById("med").options[document.getElementById("med").selectedIndex].text === "شراب") {
+                        if (document.getElementById("num").value != "0") {
+                            videos.push("20");
+                        }
+                    }
+                    //videos.push(document.getElementById("dose").value);
+                    videos.push(document.getElementById("rep").value);
+                    videos.push(document.getElementById("period").value);
+                    videos.push(document.getElementById("time").value);
+                }
+                if (i=="second" || i=="all") {
+                    videos.push(document.getElementById("use").value);
+                }
+                if (i=="third" || i=="all") {
+                    videos.push(document.getElementById("special1").value);
+                    videos.push(document.getElementById("special2").value);
+                }
+                if (i=="fourth" || i=="all") {
+                    videos.push(document.getElementById("general").value);
+                }
+                if (i=="otherB" || i=="all") {
+                    videos.push(document.getElementById("other").value);
+                }
+                viewVideos();
+            }
 
+            function viewVideos(){
+                console.log(videos);
+                player.height=screen.height*0.8;
+                player.style.display = "block";
+                player.focus();
+                while (videos[currentVideo] =="0" && (currentVideo !== videos.length)){
+                    currentVideo++;
+                }
+                if (currentVideo < videos.length){
+                    document.getElementById("vid").setAttribute("src", "assets/Videos/" + videos[currentVideo] + ".mov");
+                    player.play();
+                    currentVideo++;
+                    player.addEventListener('ended',myHandler,false);
+                }
+            }
+
+            function myHandler(e){
+                if (!e){
+                    e = window.event;
+                }
+                while (videos[currentVideo] =="0" && (currentVideo < videos.length)){
+                    currentVideo++;
+                }
+                if (currentVideo < videos.length){
+                    document.getElementById("vid").setAttribute("src", "assets/Videos/" + videos[currentVideo] + ".mov");
+                    player.play();
+                    currentVideo++;
+                }
+                else{
+                    player.style.display = "none";
+                }
+            }
+
+
+           function moveup(id){
+                document.getElementById(id).insertBefore(document.getElementById(id).options[document.getElementById(id).selectedIndex],document.getElementById(id).children[1]);
+           }
             
         </script>
         <script src="bootstrap-5.0.2-dist/js/bootstrap.bundle.min.js" ></script>
