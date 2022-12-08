@@ -374,12 +374,12 @@
 
             function viewVideos(){
                 player.height=screen.height*0.8;
-                player.style.display = "block";
-                player.focus();
                 while (videos[currentVideo] =="0" && (currentVideo !== videos.length)){
                     currentVideo++;
                 }
                 if (currentVideo < videos.length){
+                    player.style.display = "block";
+                    player.focus();
                     document.getElementById("vid").setAttribute("src", "assets/Videos/" + videos[currentVideo] + ".mov");
                     player.play();
                     currentVideo++;
