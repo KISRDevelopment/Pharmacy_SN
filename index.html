@@ -176,14 +176,6 @@
                         <option value="59">الباندول لا يأخذ مع اي مسكنات أخرى في نفس الوقت ويجب أن يكون بينهم 4 إلى 6 ساعات</option>
                         <option value="60">فروة الرأس يجب أن تكون جافة</option>
                         <option value="61">فروة الرأس يجب أن تكون مبللة</option>
-                    </select>
-                </div>
-            </div>
-            <br>
-            <div class="row">
-                <div class="col-8">
-                    <select id="special2" class="form-select" onchange="moveup(id);">
-                        <option value="0">لا يوجد</option>
                         <option value="62">هذا الدواء يسبب النعاس</option>
                         <option value="63">لا يخلط</option>
                         <option value="64">ممكن ان يخلط</option>
@@ -370,7 +362,6 @@
                 }
                 if (i=="third" || i=="all") {
                     videos.push(document.getElementById("special1").value);
-                    videos.push(document.getElementById("special2").value);
                 }
                 if (i=="fourth" || i=="all") {
                     videos.push(document.getElementById("general").value);
@@ -382,7 +373,6 @@
             }
 
             function viewVideos(){
-                console.log(videos);
                 player.height=screen.height*0.8;
                 player.style.display = "block";
                 player.focus();
