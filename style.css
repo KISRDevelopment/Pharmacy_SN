@@ -41,10 +41,10 @@ h1 {
 
 label {
     font-family: serif;
-    font-size: 16px;
+    font-size: 20px;
 }
 
-#lastButton {
+.lastButton {
     background-color: #0059a0!important;
     color: white;
     width: 300px!important;
@@ -74,7 +74,7 @@ select {
     border-color: #87c7fa!important;
 }
 
-#lastButton:hover {
+.lastButton:hover {
     color: #fff;
     background-color: #016b88!important;
     border-color: #285e8e; 
