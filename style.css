@@ -1,10 +1,10 @@
 
 
 .bg-primary {
-    background-image: url("assets/Image/kisr-logo-w.png");
+    background-image: url("assets/Image/Sanad-Logo-White.png"), url("assets/Image/kisr-logo-w.png");
     background-repeat: no-repeat;
-    background-position: right;
-    background-size: 185px;
+    background-position: left, right;
+    background-size: 100px, 185px;
     padding: 20px 10px;
     background-origin: content-box;
     background-color: #0059a0!important;
