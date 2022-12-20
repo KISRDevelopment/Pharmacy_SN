@@ -9,9 +9,7 @@
     background-color: #016b88!important;
 }
 
-* {
-    box-sizing: border-box;
-  }
+
 
 header {
     background-color: #016b88;
@@ -70,11 +68,14 @@ label {
 .lastButton {
     background-color: #016b88!important;
     color: white;
-    width: 100%!important;
+    width: 20%!important;
     height: 60px!important;
     position:relative;
     font-weight: bold;
     border-radius: 20px ; 
+    margin-left: auto;
+    margin-right: auto;
+    
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
 }
 

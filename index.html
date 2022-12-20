@@ -299,6 +299,7 @@
             </div>
             <div class="row my-3">
                 <button id="all" class="btn lastButton" onclick="callVideo(this.id)">عرض الكل</button>
+                <button id="clearAll" class="btn lastButton" onclick="resetAll(this.id)"> إلغاء</button>
             </div>
             
             
@@ -408,6 +409,45 @@
                 }
             }
 
+            function resetAll(){
+                var dropDown1 = document.getElementById("med");
+                var dropDown2 = document.getElementById("num");
+                var dropDown3 = document.getElementById("rep");
+                var dropDown4 = document.getElementById("period");
+                var dropDown5 = document.getElementById("time");
+                var dropDown6 = document.getElementById("use");
+                var dropDown7 = document.getElementById("special1");
+                var dropDown8 = document.getElementById("general");
+                var dropDown9 = document.getElementById("other");
+                if (document.getElementById("med")) {
+                    dropDown1.selectedIndex = 0;
+                }
+                if (document.getElementById("num")) {
+                    dropDown2.selectedIndex = 0;
+                }
+                if (document.getElementById("rep")) {
+                    dropDown3.selectedIndex = 0;
+                }
+                if (document.getElementById("period")) {
+                    dropDown4.selectedIndex = 0;
+                }
+                if (document.getElementById("time")) {
+                    dropDown5.selectedIndex = 0;
+                }
+                if (document.getElementById("use")) {
+                    dropDown6.selectedIndex = 0;
+                }
+                if (document.getElementById("special1")) {
+                    dropDown7.selectedIndex = 0;
+                }
+                if (document.getElementById("general")) {
+                    dropDown8.selectedIndex = 0;
+                }
+                if (document.getElementById("other")) {
+                    dropDown9.selectedIndex = 0;
+                }
+             }
+  
             function myHandler(e){
                 if (!e){
                     e = window.event;
