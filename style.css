@@ -1,29 +1,50 @@
 
-
 .bg-primary {
-    background-image: url("assets/Image/Sanad-Logo-White.png"), url("assets/Image/kisr-logo-w.png");
+
+    background-image: url("assets/Image/kisr-logo-w.png"),url("assets/Image/sanad-logo.png") ;
     background-repeat: no-repeat;
     background-position: left, right;
-    background-size: 100px, 185px;
+    background-size: 185px, 100px;
     padding: 20px 10px;
     background-origin: content-box;
-    background-color: #0059a0!important;
-    
+    background-color: #016b88!important;
 }
 
-h1.text-center {
+
+
+header {
+    background-color: #016b88;
+    background-image: url("assets/Image/kisr-logo-w.png"),url("assets/Image/sanad-logo.png") ;
+    background-repeat: no-repeat;
+    background-position: left, right;
+    background-size: 185px, 100px;
+    padding: 30px;
+    text-align: center;
+    font-size: 34px;
+    font-family: sans-serif;
+    color: white;
+
+}
+
+/* h1.text-center {
     font-size: 34px;
     color: white;
     font-family: sans-serif;
-}
+} */
 
 h1 {
     font-size: 24px;
-    color: #0583e8;
+    color: #016b88;
     font-family: sans-serif!important;
     font-weight: bolder;
 }
 
+/* p {
+    font-size: 14px;
+    color: white;
+    font-family: sans-serif!important;
+    text-align: center;
+} */
 .pb-1 {
     padding: 0px 0px 9px!important;
 }
@@ -42,17 +63,23 @@ h1 {
 label {
     font-family: serif;
     font-size: 20px;
+    font-weight: bold;
 }
 
 .lastButton {
-    background-color: #0059a0!important;
+    background-color: #016b88!important;
     color: white;
-    width: 400px!important;
+    width: 20%!important;
     height: 60px!important;
-    position: absolute!important;
-    left: 40%!important;
+    position:relative;
+    right: 400px;
+    font-weight: bold;
+    border-radius: 20px ; 
+    margin: 10px;
     
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
 }
+
 
 select {
     font-family: serif;
@@ -77,5 +104,17 @@ select {
 .lastButton:hover {
     color: #fff;
     background-color: #016b88!important;
-    border-color: #285e8e; 
+    /* border-color: #016b88;  */
+    border: 6px solid #02313e;
 }
+
+footer {
+    background-color: #016b88;
+    padding:40px;
+    text-align: center;
+    color: white;
+    font-family: sans-serif;
+    bottom: 0;
+    width: 100%;
+    display: inline-block
+} 
