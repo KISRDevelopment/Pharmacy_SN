@@ -36,7 +36,7 @@
                 <div class="col-4 form-group">
                     <label class="pb-1">نوع الدواء</label>
                     <select id="med" class="form-select" onchange="med(); moveup(id);">
-                        <option value="0">لا يوجد</option>
+                        <option value="0">---اختر---</option>
                         <option value="30">حبوب</option>
                         <option value="204">شراب</option>
                         <option value="21">بخاخ</option>
@@ -50,7 +50,7 @@
                 <div class="col-4 form-group" style="display: block">
                     <label class="pb-1">الكمية</label>
                     <select id="num" class="form-select" onchange="moveup(id);">
-                            <option value="0">لا يوجد</option>
+                            <option value="0">---اختر---</option>
 <!--                        <option value="34">1</option>-->
 <!--                        <option value="0">2</option>-->
 <!--                        <option value="35">3</option>-->
@@ -66,7 +66,7 @@
 <!--                <div class="col-3 form-group">-->
 <!--                    <label class="pb-1">المقدار</label>-->
 <!--                    <select id="dose" class="form-select">-->
-<!--                        <option value="0">لا يوجد</option>-->
+<!--                        <option value="0">---اختر---</option>-->
 <!--                        <option value="20">مل</option>-->
 <!--                        <option value="21">بخة</option>-->
 <!--                        <option value="22">بختين</option>-->
@@ -86,17 +86,17 @@
                 <div class="col-4 form-group">
                     <label class="pb-1">التكرار</label>
                     <select id="rep" class="form-select" onchange="moveup(id);">
-                        <option value="0">لا يوجد</option>
-                        <option value="0">ساعتين</option>
+                        <option value="0">---اختر---</option>
+                        <option value="291">ساعتين</option>
                         <option value="1">٤ ساعات</option>
                         <option value="2"> ٨ ساعات</option>
                         <option value="3">٦ ساعات</option>
                         <option value="4">١٢ ساعة</option>
-                        <option value="6">مرة باليوم</option>
-                        <option value="0">مرتين باليوم</option>
-                        <option value="0">٣ مرات باليوم</option>
-                        <option value="0">٤ مرات باليوم</option>
-                        <option value="0">٥ مرات باليوم</option>
+                        <option value="292">مرة باليوم</option>
+                        <option value="294">مرتين باليوم</option>
+                        <option value="293">٣ مرات باليوم</option>
+                        <option value="295">٤ مرات باليوم</option>
+                        <option value="296">٥ مرات باليوم</option>
                         <option value="5">عند اللزوم</option>
                     </select>
                 </div>
@@ -105,24 +105,30 @@
                 <div class="col-4 form-group">
                     <label class="pb-1">المدة</label>
                     <select id="period" class="form-select" onchange="moveup(id)";>
-                        <option value="0">لا يوجد</option>
+                        <option value="0">---اختر---</option>
                         <option value="7">يوم</option>
                         <option value="8">يومين</option>
-                        <option value="0">٣ ايام</option>
-                        <option value="0">٤ ايام</option>
-                        <option value="0">٥ ايام</option>
+                        <option value="297">٣ ايام</option>
+                        <option value="298">٤ ايام</option>
+                        <option value="299">٥ ايام</option>
                         <option value="10">اسبوع</option>
                         <option value="11">اسبوعين</option>
                         <option value="12">شهر</option>
                         <option value="13">شهرين</option>
-                        <option value="0">٣ شهور</option>
+                        <option value="301">٣ شهور</option>
+                        <option value="302">٦ شهور</option>
                     </select>
                 </div>
                 <div class="col-4 form-group">
                     <label class="pb-1">الوقت</label>
                     <select id="time" class="form-select" onchange="moveup(id);">
-                        <option value="0">لا يوجد</option>
-                        <option value="0">على الريق</option>
+                        <option value="0">---اختر---</option>
+                        <option value="303">الصباح</option>
+                        <option value="304">الظهر</option>
+                        <option value="307">العصر</option>
+                        <option value="305">المغرب</option>
+                        <option value="306">الليل</option>
+                        <option value="310">على الريق</option>
                         <option value="14">قبل الاكل</option>
                         <option value="15">بعد الاكل</option>
                         <option value="16">اثناء الاكل</option>
@@ -140,7 +146,7 @@
             <div class="row">
                 <div class="col-8">
                     <select id="use" class="form-select" onchange="moveup(id);">
-                        <option value="0">لا يوجد</option>
+                        <option value="0">---اختر---</option>
                         <option value="72">تبخ منه على المنطقه ثم يترك حتى ينشف</option>
                         <option value="73">يوضع داخل العين كمية صغيرة</option>
                         <option value="74">يوضع على الجفن كمية صغيرة</option>
@@ -176,7 +182,7 @@
             <div class="row">
                 <div class="col-8">
                     <select id="special1" class="form-select" onchange="moveup(id);">
-                        <option value="0">لا يوجد</option>
+                        <option value="0">---اختر---</option>
                         <option value="49">لا يخلط الكريم مع غيره</option>
                         <option value="50">لا يخلط الكريم مع المرهم</option>
                         <option value="51">لا يستخدم للوجه</option>
@@ -211,7 +217,7 @@
             <div class="row">
                 <div class="col-8">
                     <select id="general" class="form-select" onchange="moveup(id);">
-                        <option value="0">لا يوجد</option>
+                        <option value="0">---اختر---</option>
                         <option value="96">هذا الكريم للجروح</option>
                         <option value="97">هذا الكريم للحبوب</option>
                         <option value="98">هذا الكريم للدوالي</option>
@@ -290,7 +296,7 @@
             <div class="row">
                 <div class="col-8">
                     <select id="other" class="form-select" onchange="moveup(id);">
-                        <option value="0">لا يوجد</option>
+                        <option value="0">---اختر---</option>
                     </select>
                 </div>
                 <div class="col-4">
@@ -307,7 +313,7 @@
         <script>
             let options = [];
             //Construct the menu from dict (ph_dic.js)
-            options = [["لا يوجد","0"]];
+            options = [["---اختر---","0"]];
             for (let i= 163; i < 210; i++){
                 options.push([dict[i],i]);
             }
@@ -320,6 +326,9 @@
             for (let i= 284; i < 287; i++){
                 options.push([dict[i],i]);
             }
+            for (let i= 308; i < 310; i++){
+                options.push([dict[i],i]);
+            }    
             document.getElementById("other").innerHTML = options.map(x => `<option value=${x[1]}>${x[0]}</option>`).join('\n');
 
             function med() {
@@ -328,31 +337,31 @@
                     document.getElementById("num").remove(i);
                 }
                 if (document.getElementById("med").options[document.getElementById("med").selectedIndex].text === "حبوب") {
-                    options = [["لا يوجد","0"], ["1","34"],["2","0"],["3","35"],["4","36"],["5","37"],["6","38"],["7","39"],["8","40"],["9","41"],["10","42"]];
+                    options = [["---اختر---","0"], ["1","34"],["2","287"],["3","35"],["4","36"],["5","37"],["6","38"],["7","39"],["8","40"],["9","41"],["10","42"]];
                 }
                 else if (document.getElementById("med").options[document.getElementById("med").selectedIndex].text === "شراب") {
-                    options = [["لا يوجد","0"],["1","34"],["2","0"],["2.5","0"],["3","35"],["4","36"],["5","37"],["6","38"],["7","39"],["7.5","0"],["8","40"],["9","41"],["10","42"],["15","43"],["20","44"],["25","45"],["50","46"],["75","47"],["100","48"]];
+                    options = [["---اختر---","0"],["1","34"],["2","287"],["2.5","288"],["3","35"],["4","36"],["5","37"],["6","38"],["7","39"],["7.5","289"],["8","40"],["9","41"],["10","42"],["15","43"],["20","44"],["25","45"],["50","46"],["75","47"],["100","48"]];
                 }
                 else if (document.getElementById("med").options[document.getElementById("med").selectedIndex].text === "بخاخ") {
-                    options = [["لا يوجد","0"],["1","21"],["2","22"]];
+                    options = [["---اختر---","0"],["1","21"],["2","22"]];
                 }
                 else if (document.getElementById("med").options[document.getElementById("med").selectedIndex].text === "قطرات") {
-                    options = [["لا يوجد","0"],["1","34"],["2","0"],["3","35"]];
+                    options = [["---اختر---","0"],["1","34"],["2","287"],["3","35"]];
                 }
                 else if (document.getElementById("med").options[document.getElementById("med").selectedIndex].text === "كريم") {
-                    options = [["لا يوجد","0"]];
+                    options = [["---اختر---","0"]];
                 }
                 else if (document.getElementById("med").options[document.getElementById("med").selectedIndex].text === "مرهم") {
-                    options = [["لا يوجد","0"]];
+                    options = [["---اختر---","0"]];
                 }
                 else if (document.getElementById("med").options[document.getElementById("med").selectedIndex].text === "تحاميل") {
-                    options = [["لا يوجد","0"],["1","34"]];
+                    options = [["---اختر---","0"],["1","34"]];
                 }
                 else if (document.getElementById("med").options[document.getElementById("med").selectedIndex].text === "إبر") {
-                    options = [["لا يوجد","0"]];
+                    options = [["---اختر---","0"]];
                 }
                 else{
-                    options =[["لا يوجد","0"]];
+                    options =[["---اختر---","0"]];
                 }
                 document.getElementById("num").innerHTML = options.map(x => `<option value=${x[1]}>${x[0]}</option>`).join('\n');
             }
