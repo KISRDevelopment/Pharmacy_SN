@@ -33,7 +33,7 @@
 ::978f952a14a936cc963da21a135fa983
 @echo off
 title Pharmacy batch script
-cd \Users\nsnayen\Desktop\Web
+cd \nsnayen\Desktop\Web
 start python -m http.server &
 explorer http://localhost:8000/
 pause
