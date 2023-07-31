@@ -110,8 +110,12 @@ select {
 
 footer {
     background-color: #016b88;
-    padding:20px;
-    text-align: justify;
+    background-image: url("assets/Image/MOH.png");
+    background-position: left;
+    background-size: 60px, 60px;
+    background-repeat: no-repeat;
+    padding: 30px;
+    text-align: right;
     color: white;
     font-family: sans-serif;
     bottom: 0%;
