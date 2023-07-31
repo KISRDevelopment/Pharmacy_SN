@@ -111,10 +111,10 @@ select {
 footer {
     background-color: #016b88;
     padding:20px;
-    text-align: center;
+    text-align: justify;
     color: white;
     font-family: sans-serif;
-    bottom: 0;
+    bottom: 0%;
     width: 100%;
     display: inline-block
 } 
