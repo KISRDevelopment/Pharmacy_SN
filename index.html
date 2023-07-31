@@ -44,7 +44,10 @@
                         <option value="207">كريم</option>
                         <option value="206">مرهم</option>
                         <option value="33">تحاميل</option>
-                        <option value="254">إبر</option>
+                        <option value="314">لصقة كل ١٢ ساعة</option>
+                        <option value="314">لصقة اسبوعية</option>
+                        <option value="254">إبرة</option>
+                        <option value="254">Trulicity Pen</option>
                     </select>
                 </div>
                 <div class="col-4 form-group" style="display: block">
@@ -112,7 +115,9 @@
                         <option value="298">٤ ايام</option>
                         <option value="299">٥ ايام</option>
                         <option value="10">اسبوع</option>
+                        <option value="311">١٠ ايام</option>
                         <option value="11">اسبوعين</option>
+                        <option value="312">٢١ يوم</option>
                         <option value="12">شهر</option>
                         <option value="13">شهرين</option>
                         <option value="301">٣ شهور</option>
@@ -147,6 +152,9 @@
                 <div class="col-8">
                     <select id="use" class="form-select" onchange="moveup(id);">
                         <option value="0">---اختر---</option>
+                        <option value="322">Trulicity Pen</option>
+                        <option value="322">لصقة اسبوعية</option>
+                        <option value="322">لصقة كل ١٢ ساعة</option>
                         <option value="72">تبخ منه على المنطقه ثم يترك حتى ينشف</option>
                         <option value="73">يوضع داخل العين كمية صغيرة</option>
                         <option value="74">يوضع على الجفن كمية صغيرة</option>
@@ -206,6 +214,7 @@
                         <option value="69">يحفظ في الثلاجة بعد الاستخدام</option>
                         <option value="70"> وصفة الدواء يجب ان تكون معك وقت السفر</option>
                         <option value="71">تجنب استخدام الدواء لفترات طويلة للأطفال والرضع</option>
+                        <option value="313">قد تشعر ببعض الغثيان و القيء</option>
                     </select>
                 </div>
                 <div class="col-4">
@@ -346,6 +355,7 @@
             document.getElementById("other").innerHTML = options.map(x => `<option value=${x[1]}>${x[0]}</option>`).join('\n');
 
             function med() {
+                document.getElementById("use")[0].selected = true;
                 options = [];
                 for(let i = document.getElementById("num").options.length-1; i >= 0; i--) {
                     document.getElementById("num").remove(i);
@@ -374,6 +384,21 @@
                 else if (document.getElementById("med").options[document.getElementById("med").selectedIndex].text === "إبر") {
                     options = [["---اختر---","0"]];
                 }
+                else if (document.getElementById("med").options[document.getElementById("med").selectedIndex].text === "Trulicity Pen") {
+                    options = [["---اختر---","0"]];
+                    for(let i = 0; i<document.getElementById("use").length; i++){
+                        if(document.getElementById("use")[i].text=== "Trulicity Pen") { //Compare
+                            document.getElementById("use").options[i].selected = true;}}}
+                else if (document.getElementById("med").options[document.getElementById("med").selectedIndex].text === "لصقة اسبوعية"){
+                    options = [["---اختر---","0"]];
+                    for(let i = 0; i<document.getElementById("use").length; i++){
+                        if(document.getElementById("use")[i].text=== "لصقة اسبوعية") { //Compare
+                            document.getElementById("use").options[i].selected = true;}}}
+                else if (document.getElementById("med").options[document.getElementById("med").selectedIndex].text === "لصقة كل ١٢ ساعة"){
+                    options = [["---اختر---","0"]];
+                    for(let i = 0; i<document.getElementById("use").length; i++){
+                        if(document.getElementById("use")[i].text=== "لصقة كل ١٢ ساعة") { //Compare
+                            document.getElementById("use").options[i].selected = true;}}}
                 else{
                     options =[["---اختر---","0"]];
                 }
@@ -402,7 +427,28 @@
                     videos.push(document.getElementById("time").value);
                 }
                 if (i=="second" || i=="all") {
-                    videos.push(document.getElementById("use").value);
+                    if ((document.getElementById("med").options[document.getElementById("med").selectedIndex].text) === "Trulicity Pen") {
+                        videos.push("322");
+                        videos.push("323");
+                        videos.push("324");
+                    }
+                    else if ((document.getElementById("med").options[document.getElementById("med").selectedIndex].text) === "لصقة اسبوعية"){
+                        videos.push("315");
+                        //videos.push("316");
+                        videos.push("317");
+                        videos.push("318");
+                        videos.push("319");
+                        videos.push("320");
+                        videos.push("321");
+                    }
+                    else if ((document.getElementById("med").options[document.getElementById("med").selectedIndex].text) === "لصقة كل ١٢ ساعة"){
+                        videos.push("325");
+                        videos.push("327");
+                        videos.push("328");
+                        videos.push("326");
+                    }
+                    else
+                        videos.push(document.getElementById("use").value);
                 }
                 if (i=="third" || i=="all") {
                     videos.push(document.getElementById("special1").value);
